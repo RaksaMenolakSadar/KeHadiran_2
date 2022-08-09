@@ -10,7 +10,7 @@
 
     <div class="p-5 mb-4 bg-light border rounded-3">
       <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Hello {{ auth()->user()->username }}, wanted to see the user list?</h1>
+        <h1 class="display-5 fw-bold">Hello {{ auth()->user()->username }}, want to see the user list?</h1>
         <p class="col-md-8 fs-4">Click the button bellow to go to the user list</p>
         <a href="/dashboard/users" class="btn btn-outline-dark" type="button">User List</a>
       </div>
