@@ -1,0 +1,91 @@
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-registration input {
+    border-radius: 0%;
+    margin-bottom: -1px;
+}
+
+/* card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    color: black;
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #2470dc;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #2470dc;
+}
+
+button:hover,
+a:hover {
+    opacity: 0.7;
+}
+
+.dropdown-item {
+    font-size: 16px;
+}
+
+.register {
+    font-size: 15px;
+}
+
+.d-block {
+    font-size: 15px;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+
+/* .footer {
+    position: fixed;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #2470dc;
+    width: 100%;
+    bottom: 0;
+} */
+
+.fa {
+    color: black;
+}
+
+.contact {
+    color: black;
+}
