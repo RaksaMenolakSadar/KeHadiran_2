@@ -18,22 +18,8 @@
     <div class="container mt-3">
         @yield('container')
     </div>
-<!-- 
-<script>
-    function myFunction() {
-    var x = document.getElementById("myInput");
-    if (x.type === "password") {
-    x.type = "text";
-    } else {
-    x.type = "password";
-    }
-}
-</script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <!-- <div class="footer">
-            <p> ini adalah footer </p>
-        </div> -->
 </body>
 
 </html>
