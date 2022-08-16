@@ -5,7 +5,7 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
       <div class="carousel-item">
-        <img src="img\101-istilah-otomotif-mobil.jpg" class="d-block w-100" alt="...">
+        <img src="img\rsz_101-istilah-otomotif-mobil.jpg" class="d-block w-100" alt="...">
       </div>
     <div class="carousel-item active">
       <img src="img\teknologi.jpg" class="d-block w-100" alt="...">
