@@ -18,4 +18,8 @@
     </a>
     <p class="contact"><button style="background-color: black;" disabled>Contact</button></p>
 </div>
+<footer class="mt-5 text-muted border-top">
+    &copy; 2022
+    By Rakhsha
+</footer>
 @endsection

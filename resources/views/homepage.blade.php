@@ -20,4 +20,8 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<footer class="mt-5 text-muted border-top">
+    &copy; 2022
+    By Rakhsha
+</footer>
 @endsection
