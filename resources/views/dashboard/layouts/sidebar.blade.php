@@ -15,8 +15,14 @@
         </li>
         <li class="nav-item">
             <a class="nav-link {{ Request::is('dashboard/users*') ? 'active' : '' }}" href="/dashboard/users">
-            <span data-feather="user" class="align-text-bottom"></span>
+            <span data-feather="list" class="align-text-bottom"></span>
             Users
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('dashboard/about*') ? 'active' : '' }}" href="/dashboard/about">
+            <span data-feather="user" class="align-text-bottom"></span>
+            About
             </a>
         </li>
         <hr class="solid">

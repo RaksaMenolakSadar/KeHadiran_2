@@ -11,7 +11,7 @@
     <div class="p-5 mb-4 bg-light border rounded-3">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Hello {{ auth()->user()->username }}, want to see the user list?</h1>
-        <p class="col-md-8 fs-4">Click the button bellow to go to the user list</p>
+        <p class="col-md-8 fs-4">Click the button below to go to the user list</p>
         <a href="/dashboard/users" class="btn btn-outline-dark" type="button">User List</a>
       </div>
     </div>
@@ -20,8 +20,16 @@
       <div class="col-md-6">
         <div class="h-100 p-5 text-white bg-dark rounded-3">
           <h2>Want to go to the homepage?</h2>
-          <p>Click the button bellow to go to the homepage</p>
+          <p>Click the button below to go to the homepage</p>
           <a href="/" class="btn btn-outline-light" type="button">Homepage</a>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>About?</h2>
+          <p>Click the button below to go to the about.</p>
+          <a href="/dashboard/about" class="btn btn-outline-dark" type="button">about</a>
         </div>
       </div>
     </div>

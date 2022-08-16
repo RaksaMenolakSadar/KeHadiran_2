@@ -2,11 +2,13 @@
 
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardAboutController;
 use App\Http\Controllers\DashboardPostsController;
 use App\Http\Controllers\DashboardUsersController;
-use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,7 +70,7 @@ Route::middleware('role:admin')->get('/dashboard', function() {
 
 // Route::resource('/dashboard/posts', DashboardPostsController::class)->middleware('auth');
 Route::resource('/dashboard/users', DashboardUsersController::class)->middleware('auth');
-
+Route::resource('/dashboard/about', DashboardAboutController::class)->middleware('auth');
 
 
 Route::get('post/{slug}', function($slug) {

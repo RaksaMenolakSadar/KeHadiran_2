@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardPostsController extends Controller
+class DashboardAboutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,10 +13,7 @@ class DashboardPostsController extends Controller
      */
     public function index()
     {
-    //     return view('dashboard.post.index', [
-    //         'posts' => Post::where('user_id', auth()->user()->id()->get())
-    //     ]
-    // );
+        return view('dashboard.about.index');
     }
 
     /**
