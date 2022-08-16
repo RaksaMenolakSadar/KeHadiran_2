@@ -12,15 +12,15 @@
     @csrf
     <div class="mb-3">
     <label for="email" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="email" name="email" required autofocus value="{{ old('email'), $user->email }}">
+    <input type="email" class="form-control" id="email" name="email" required autofocus>
     </div>
     <div class="mb-3">
     <label for="name" class="form-label">Name</label>
-    <input type="text" class="form-control" id="name" name="name" required value="{{ old('name'), $user->name }}">
+    <input type="text" class="form-control" id="name" name="name" required>
     </div>
     <div class="mb-3">
     <label for="username" class="form-label">Username</label>
-    <input type="text" class="form-control" id="username" name="username" required value="{{ old('username'), $user->username }}">
+    <input type="text" class="form-control" id="username" name="username" required>
     </div>
     <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
