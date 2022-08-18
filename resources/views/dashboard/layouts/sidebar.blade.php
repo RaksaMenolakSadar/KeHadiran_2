@@ -32,6 +32,15 @@
             Homepage
             </a>
         </li>
+        <hr class="solid">
+        <li class="nav-item">
+            <a class="nav-link {{ Request::is('dashboard/logout') ? 'active' : '' }}">
+            <form action="/logout" method="post">
+                @csrf
+                <button type="submit" class="dropdown-item"><span data-feather="log-out" class="align-text-bottom"></span> Logout</button>
+                </form>
+            </a>
+        </li>
         </ul>
     </div>
 </nav>
