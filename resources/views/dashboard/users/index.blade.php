@@ -11,7 +11,7 @@
   </div>
 @endif
 
-<div class="table-responsive col-lg-6">
+<div class="table-responsive col-lg-8">
   <a href="/dashboard/users/create" class="btn btn-outline-primary mb-2"><span data-feather="user-plus"></span> Add new user</a>
   <a href="/dashboard" class="btn btn-outline-success mb-2"><span data-feather="home"></span> Back to dashboard</a>
     <table class="table table-striped table-sm">
