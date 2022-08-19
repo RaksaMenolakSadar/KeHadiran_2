@@ -26,8 +26,8 @@
     <label for="exampleInputPassword1" class="form-label">Password</label>
     <input type="password" class="form-control" id="password" name="password">
     </div>
-    <a href="/dashboard/users" class="btn btn-warning"><- Return to list</a>
-    <button type="submit" class="btn btn-primary">Edit User</button>
+    <a href="/dashboard/users" class="btn btn-outline-warning"><- Return to list</a>
+    <button type="submit" class="btn btn-outline-primary">Edit User</button>
     </form>
 </div>
 
