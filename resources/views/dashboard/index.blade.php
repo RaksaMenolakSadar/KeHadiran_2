@@ -35,22 +35,6 @@
     </div>
 
 </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="panel panel-default">
-            <div class="panel-heading my-2">
-              Chart
-                <div class="col-lg-8">
-                  <canvas id="userChart" class="rounded shadow"></canvas>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
 <!--  -->
 
 <footer class="mt-5 text-muted border-top">
