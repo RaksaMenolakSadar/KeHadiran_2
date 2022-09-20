@@ -2,11 +2,11 @@
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Welcome To Dashboard, {{ auth()->user()->username }}</h1>
-    </div>
+  <h1 class="h2">Welcome To Dashboard, {{ auth()->user()->username }}</h1>
+</div>
     
-    <main>
-<div class="container py-4">
+<main>
+  <div class="container py-4">
 
     <div class="p-5 mb-4 bg-light border rounded-3">
       <div class="container-fluid py-5">
@@ -24,7 +24,7 @@
           <a href="/" class="btn btn-outline-light" type="button">Homepage</a>
         </div>
       </div>
-      
+        
       <div class="col-md-6">
         <div class="h-100 p-5 bg-light border rounded-3">
           <h2>About?</h2>
@@ -34,12 +34,11 @@
       </div>
     </div>
 
-</div>
-<!--  -->
-
-<footer class="mt-5 text-muted border-top">
-  &copy; 2022
-  By Rakhsha
-</footer>
+  </div>
+  
+  <footer class="mt-5 text-muted border-top">
+    &copy; 2022
+    By Rakhsha
+  </footer>
 </main>
 @endsection

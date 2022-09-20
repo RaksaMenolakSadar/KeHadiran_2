@@ -17,8 +17,8 @@
     <link href="/css/dashboard.css" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/jumbotron/">
 
-  </head>
-  <body>
+    </head>
+    <body>
     
 @include('dashboard.layouts.header')
 
