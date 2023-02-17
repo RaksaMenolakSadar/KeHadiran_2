@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 .form-signin .form-floating:focus-within {
     z-index: 2;
 }
@@ -92,4 +94,85 @@ hr.solid {
 
 .contact {
     color: black;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+#chart {
+    width: 30px;
+    margin: 35px auto;
+}
+
+/* .card-about {
+    width: 200px;
+}
+
+.card-about {
+    transition: 1s;
+}
+img {
+    height: 500px;
+}
+
+.card-about {
+    animation: rotate 1s infinite;
+}
+
+body {
+    animation: rgb 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(100deg);
+    }
+    20% {
+        transform: rotate(200deg) scale(1.2);
+    }
+    40% {
+        transform: rotate(300deg) scale(1.4);
+    }
+    60% {
+        transform: rotate(400deg) scale(1.6);
+    }
+    80% {
+        transform: rotate(500deg) scale(1.8);
+    }
+    100% {
+        transform: rotate(600deg) scale(2);
+    }
+}
+
+@keyframes rgb {
+    0% {
+        background-color: #2470dc;
+    }
+    20% {
+        background-color: red;
+    }
+    40% {
+        background-color: yellow;
+    }
+    60% {
+        background-color: green;
+    }
+    80% {
+        background-color: orange;
+    }
+    100% {
+        background-color: pink;
+    }
+} */
+
+img {
+    width: 100%;
+    margin: 24px 0px;
+}
+
+.navbar-brand {
+    width: 150px;
+    justify-content: start;
 }

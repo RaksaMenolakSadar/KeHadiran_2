@@ -13,7 +13,7 @@ class DashboardAboutController extends Controller
      */
     public function index()
     {
-        return view('dashboard.about.index');
+        return view('dashboard.graphs.index');
     }
 
     /**

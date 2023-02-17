@@ -8,14 +8,23 @@
 <div class="col-lg-5">
     <form method="post" action="/dashboard/users">
     @csrf
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" name="email">
+        <div class="mb-3">Kelas
+            <select name="kelas" class="form-select" aria-label="Default select example">
+                <option selected>Opsi kelas</option>
+                <option value="RPL">RPL</option>
+                <option value="TKJ">TKJ</option>
+                <option value="OTKP">OTKP</option>
+            </select>
         </div>
 
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name">
+            <label for="nama" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="nama">
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">email</label>
+            <input type="text" class="form-control" id="email" name="email">
         </div>
 
         <div class="mb-3">

@@ -3,7 +3,7 @@
 @section('container')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="card">
+<div class="card-about">
     <a href="img\foto saia.jpg" download="img\foto saia.jpg">
         <img src="img\foto saia.jpg" alt="saia" style="width:100%">
     </a>

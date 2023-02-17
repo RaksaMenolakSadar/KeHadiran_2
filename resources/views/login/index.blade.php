@@ -24,6 +24,9 @@
         <form action="/login" method="post">
         @csrf
     
+
+        <img src="{{asset('img/yes.png')}}" alt="">
+
       <div class="form-floating">
         <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="name@example.com" autofocus required value="{{ old('email') }}">
           <label for="email">Email</label>
@@ -42,9 +45,9 @@
       <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
       </form>
 
-      <small class="d-block text-center mt-2">
+      <!-- <small class="d-block text-center mt-2">
         Not Registered? <a class="register" href="/register">Register now!</a>
-      </small>
+      </small> -->
 
     </main>
   </div>

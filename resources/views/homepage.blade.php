@@ -2,7 +2,7 @@
 
 @section('container')
 <h1>Homepage</h1>
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
       <div class="carousel-item">
         <img src="img\rsz_101-istilah-otomotif-mobil.jpg" class="d-block w-100" alt="...">
@@ -22,7 +22,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 
-</div>
+</div> -->
 
 <footer class="mt-5 text-muted border-top">
     &copy; 2022

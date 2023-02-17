@@ -8,21 +8,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled {{ Request::is('dashboard/post') ? 'active' : '' }}" href="/dashboard/post">
-                <span data-feather="pen-tool" class="align-text-bottom"></span>
-                Posts (Disabled for a moment :D)
-                </a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard/users*') ? 'active' : '' }}" href="/dashboard/users">
                 <span data-feather="list" class="align-text-bottom"></span>
-                Users
+                Users List
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('dashboard/about*') ? 'active' : '' }}" href="/dashboard/about">
-                <span data-feather="user" class="align-text-bottom"></span>
-                About
+                <a class="nav-link {{ Request::is('dashboard/graphs*') ? 'active' : '' }}" href="/dashboard/graphs">
+                <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+                Graph
                 </a>
             </li>
             <hr class="solid">

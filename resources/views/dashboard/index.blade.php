@@ -18,18 +18,18 @@
 
     <div class="row align-items-md-stretch">
       <div class="col-md-6">
-        <div class="h-100 p-5 text-white bg-dark rounded-3">
+        <div class="h-100 p-5 text-dark  rounded-3" style="background-color: #0cc0df;">
           <h2>Want to go to the homepage?</h2>
           <p>Click the button below to go to the homepage</p>
-          <a href="/" class="btn btn-outline-light" type="button">Homepage</a>
+          <a href="/" class="btn btn-outline-dark" type="button">Homepage</a>
         </div>
       </div>
         
       <div class="col-md-6">
         <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>About?</h2>
+          <h2>Graph?</h2>
           <p>Click the button below to go to the about.</p>
-          <a href="/dashboard/about" class="btn btn-outline-dark" type="button">about</a>
+          <a href="/dashboard/graphs" class="btn btn-outline-dark" type="button">Graph</a>
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@
         <meta name="author" content="Muhammad Rakhsha Nabil">
         <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
         <title>Web | Dashboards</title>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     
 
 <!-- CSS only -->
@@ -47,5 +48,23 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+        var options = {
+        chart: {
+            type: 'line', width:1000
+        },
+        series: [{
+            name: 'sales',
+            data: [30,40,35,50,49,60,70,91,125]
+        }],
+        xaxis: {
+            categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+        }
+        }
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+        chart.render();
+    </script>
     </body>
 </html>

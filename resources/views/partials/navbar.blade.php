@@ -1,25 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg" style="background-color: #4169E1; color:white">
     <div class="container">
-        <a class="navbar-brand" href="/">Web Rakhsha</a>
+        <a class="navbar-brand" style="color:inherit" href="/">
+            <img src="{{asset('img/ya-removebg-preview.png')}}" alt="">
+        </a>
         <button class="navbar-toggler position-absolute mt-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Home</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" style="color: inherit;" href="/">Home</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled {{ Request::is('post') ? 'active' : '' }}" href="/post">Post</a>
-                </li>
+                </li> -->
             </ul>
             <ul class="navbar-nav ms-auto">
                 @auth
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" style="color: inherit;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Welcome, {{ auth()->user()->username }}
                     </a>
                     <ul class="dropdown-menu">
@@ -39,7 +38,7 @@
                 </li>
                 @else
                 <li class="nav-item">
-                    <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i>  Login</a>
+                    <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right" style="color: inherit;"></i>  Login</a>
                 </li>
                 @endauth
             </ul>            

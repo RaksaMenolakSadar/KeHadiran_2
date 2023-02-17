@@ -70,11 +70,11 @@ Route::middleware('role:admin')->get('/dashboard', function() {
 
 // Route::resource('/dashboard/posts', DashboardPostsController::class)->middleware('auth');
 Route::resource('/dashboard/users', DashboardUsersController::class)->middleware('auth');
-Route::resource('/dashboard/about', DashboardAboutController::class)->middleware('auth');
+Route::resource('/dashboard/graphs', DashboardAboutController::class)->middleware('auth');
 
 
-Route::get('post/{slug}', function($slug) {
-    return view('posts', [   
-        "title" => "single post"
-    ]);
-});
+// Route::get('post/{slug}', function($slug) {
+//     return view('posts', [   
+//         "title" => "single post"
+//     ]);
+// });
