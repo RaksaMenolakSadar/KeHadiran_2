@@ -19,17 +19,20 @@ class LoginController extends Controller
         $credentials = $request->validate([
             'email' => 'required | email:dns',
             'password' => 'required'
-        ]);
+        ]
+    );
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-                if (Auth::user()->roles->first()->name=='admin')
-                    {
-                        return redirect('/dashboard');
-                    }
-            return redirect()->intended('/');
-        }
-        
+    if (Auth::attempt($credentials)) {
+        $request->session()->regenerate();
+            if (Auth::user()->roles->first()->nama=='admin')
+                {
+                    return redirect('/dashboard');
+                }
+            if (Auth::user()->roles->first()->nama=='user')
+                {
+                    redirect()->intended('/');
+                }
+            }
         return back()->with('loginError', 'login failed!');
     }
 

@@ -174,5 +174,8 @@ img {
 
 .navbar-brand {
     width: 150px;
-    justify-content: start;
+}
+
+.nav-link {
+    font-size: 17px;
 }

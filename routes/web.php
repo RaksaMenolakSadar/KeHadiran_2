@@ -26,30 +26,6 @@ Route::get('/', function () {
         "title" => "Homepage"
     ]);
 });
-
-Route::get('/about', function () {
-    return view('about', [
-        "title" => "About",
-        "nama" => "Muhammad Rakhsha Nabil",
-        "email" => "rakhshamuhammad@gmail.com",
-        "image" => "foto saia.jpg"
-    ]);
-});
-
-
-Route::get('/post', [PostController::class, 'index']);
-
-Route::get('/post', function () {
-    $blog_post = [
-        
-    ];
-
-    return view('post', [
-        "title" => "Post",
-        "post" => $blog_post
-    ]);
-});
-
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
@@ -65,16 +41,6 @@ Route::middleware('role:admin')->get('/dashboard', function() {
     return view('dashboard.index');
 })->middleware('auth');
 
-// Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('guest');
 
-
-// Route::resource('/dashboard/posts', DashboardPostsController::class)->middleware('auth');
 Route::resource('/dashboard/users', DashboardUsersController::class)->middleware('auth');
 Route::resource('/dashboard/graphs', DashboardAboutController::class)->middleware('auth');
-
-
-// Route::get('post/{slug}', function($slug) {
-//     return view('posts', [   
-//         "title" => "single post"
-//     ]);
-// });

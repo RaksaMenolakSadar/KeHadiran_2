@@ -10,10 +10,15 @@
     @csrf
         <div class="mb-3">Kelas
             <select name="kelas" class="form-select" aria-label="Default select example">
-                <option selected>Opsi kelas</option>
                 <option value="RPL">RPL</option>
                 <option value="TKJ">TKJ</option>
                 <option value="OTKP">OTKP</option>
+            </select>
+        </div>
+        <div class="mb-3">Role
+            <select name="role" class="form-select" aria-label="Default select example">
+                <option value="murid">murid</option>
+                <option value="guru">guru</option>
             </select>
         </div>
 

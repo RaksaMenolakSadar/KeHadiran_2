@@ -39,6 +39,7 @@ class DashboardUsersController extends Controller
     {
         $validatedData = $request->validate([
             'email' => 'required | email | unique:users',
+            'role' => 'required',
             'kelas' => 'required',
             'nama' => 'required | max:100',
             'username' => 'required', 'min:3', 'max:100', 'unique:users',
@@ -88,7 +89,7 @@ class DashboardUsersController extends Controller
     {
         $rules = [
             'email' => 'required | email | unique:users',
-            'name' => 'required | max:100',
+            'nama' => 'required | max:100',
             'username' => ['required', 'min:3', 'max:100', 'unique:users'],
             'password' => 'required | min:5 | max:15'
         ];

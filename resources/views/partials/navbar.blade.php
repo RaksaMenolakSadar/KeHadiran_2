@@ -3,17 +3,11 @@
         <a class="navbar-brand" style="color:inherit" href="/">
             <img src="{{asset('img/ya-removebg-preview.png')}}" alt="">
         </a>
-        <button class="navbar-toggler position-absolute mt-auto collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" style="color: inherit;" href="/">Home</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="/about">About</a>
-                </li> -->
             </ul>
             <ul class="navbar-nav ms-auto">
                 @auth
@@ -22,12 +16,14 @@
                         Welcome, {{ auth()->user()->username }}
                     </a>
                     <ul class="dropdown-menu">
+                        @if (Auth::user('admin')->can('/dashboard'))
                         <li>
                             <a class="dropdown-item" href="/dashboard"><i class="bi bi-grid-1x2"></i> Dashboard</a>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+                        @endif
                         <li>
                             <form action="/logout" method="post">
                                 @csrf
