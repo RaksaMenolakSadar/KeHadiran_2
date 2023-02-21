@@ -20,6 +20,7 @@
           <th scope="col">No</th>
           <th scope="col">Nama</th>
           <th scope="col">Kelas</th>
+          <th scope="col">Role</th>
           <th scope="col">Username</th>
           <th scope="col">Email</th>
           <th scope="col">Action</th>
@@ -32,6 +33,11 @@
             <td>{{ $loop->iteration }}</td>
             <td>{{ $user->nama }}</td>
             <td>{{ $user->kelas }}</td>
+            <td>
+              @foreach($user->roles as  $role)
+                {{ $role->name }}
+              @endforeach
+            </td>
             <td>{{ $user->username }}</td>
             <td>{{ $user->email }}</td>
             <td>

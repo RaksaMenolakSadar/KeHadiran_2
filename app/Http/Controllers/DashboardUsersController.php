@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 class DashboardUsersController extends Controller
 {
@@ -14,8 +16,9 @@ class DashboardUsersController extends Controller
      */
     public function index()
     {
+        
         return view('dashboard.users.index', [
-            'users' => User::all()
+            'users' => User::all(),
         ]);
     }
 
@@ -26,7 +29,10 @@ class DashboardUsersController extends Controller
      */
     public function create()
     {
-        return view('dashboard.users.create');
+        return view('dashboard.users.create', [
+            'roles' => Role::all()
+
+        ]);
     }
 
     /**
@@ -45,9 +51,20 @@ class DashboardUsersController extends Controller
             'username' => 'required', 'min:3', 'max:100', 'unique:users',
             'password' => 'required | min:5 | max:15'
         ]);
+        
+        // $validatedData['password'] = bcrypt($validatedData['password']);
 
-        $validatedData['password'] = bcrypt($validatedData['password']);
-        User::create($validatedData);
+        // $user =        User::create($validatedData);
+
+        $user = User::create([
+            'email' => $request->email,
+            'nama' => $request->nama,
+            'kelas' => $request->kelas,
+            'username' => $request->username,
+            'password' => Hash::make($request->password)
+        ]);
+
+        $user->assignRole($request->role);
 
 
         return redirect('/dashboard/users')->with('success', 'User has been added!');

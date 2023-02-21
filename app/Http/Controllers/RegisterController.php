@@ -20,15 +20,15 @@ class RegisterController extends Controller
     {
         $validatedData = $request->validate([
             'level' => 'nullabel',
-            'name' => 'required | max:100',
+            'nama' => 'required | max:100',
             'username' => ['required', 'min:3', 'max:100', 'unique:users'],
             'email' => 'required | email | unique:users',
             'password' => 'required | min:5 | max:15'
         ]);
 
         $validatedData['password'] = bcrypt($validatedData['password']);
-        User::create($validatedData);
-
+        $user = User::create($validatedData);
+        $user->assignRole('user');
         return redirect('/login')->with('success', 'Registration success! Please Login!');
     }
 

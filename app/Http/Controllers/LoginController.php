@@ -22,18 +22,28 @@ class LoginController extends Controller
         ]
     );
 
-    if (Auth::attempt($credentials)) {
-        $request->session()->regenerate();
-            if (Auth::user()->roles->first()->nama=='admin')
-                {
-                    return redirect('/dashboard');
-                }
-            if (Auth::user()->roles->first()->nama=='user')
-                {
-                    redirect()->intended('/');
-                }
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            if(Auth::user()->roles->first()->name == 'admin')
+            {
+                return redirect('/dashboard');
             }
-        return back()->with('loginError', 'login failed!');
+            else if(Auth::user()->roles->first()->name == 'user')
+            {
+                return redirect('/');
+            }
+            else if(Auth::user()->roles->first()->name == 'murid')
+            {
+                return redirect('/');
+            }
+            else if(Auth::user()->roles->first()->name == 'guru')
+            {
+                return redirect('/');
+            }
+            else {
+                return "gagal";
+            }
+        }
     }
 
     public function logout(Request $request)

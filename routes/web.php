@@ -1,13 +1,9 @@
 <?php
 
-use App\Models\Post;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DashboardAboutController;
-use App\Http\Controllers\DashboardPostsController;
+use App\Http\Controllers\DashboardGraphController;
 use App\Http\Controllers\DashboardUsersController;
 
 /*
@@ -43,4 +39,4 @@ Route::middleware('role:admin')->get('/dashboard', function() {
 
 
 Route::resource('/dashboard/users', DashboardUsersController::class)->middleware('auth');
-Route::resource('/dashboard/graphs', DashboardAboutController::class)->middleware('auth');
+Route::resource('/dashboard/graphs', DashboardGraphController::class)->middleware('auth');

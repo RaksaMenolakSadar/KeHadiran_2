@@ -17,8 +17,9 @@
         </div>
         <div class="mb-3">Role
             <select name="role" class="form-select" aria-label="Default select example">
-                <option value="murid">murid</option>
-                <option value="guru">guru</option>
+                @foreach($roles as $role)
+                <option value="{{ $role->name }}">{{ $role->name }}</option>
+                @endforeach
             </select>
         </div>
 
