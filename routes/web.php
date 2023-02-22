@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PresensiController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardGraphController;
 use App\Http\Controllers\DashboardUsersController;
@@ -40,3 +41,5 @@ Route::middleware('role:admin')->get('/dashboard', function() {
 
 Route::resource('/dashboard/users', DashboardUsersController::class)->middleware('auth');
 Route::resource('/dashboard/graphs', DashboardGraphController::class)->middleware('auth');
+
+Route::resource('/presensi/masuk', PresensiController::class);

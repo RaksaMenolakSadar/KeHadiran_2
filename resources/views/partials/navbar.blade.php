@@ -8,6 +8,9 @@
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" style="color: inherit;" href="/">Home</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('/presensi/masuk') ? 'active' : '' }}" style="color: inherit;" href="/presensi/masuk">Presensi</a>
+                </li>
             </ul>
             <ul class="navbar-nav ms-auto">
                 @auth
@@ -16,14 +19,12 @@
                         Welcome, {{ auth()->user()->username }}
                     </a>
                     <ul class="dropdown-menu">
-                        @if (Auth::user('admin')->can('/dashboard'))
                         <li>
                             <a class="dropdown-item" href="/dashboard"><i class="bi bi-grid-1x2"></i> Dashboard</a>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        @endif
                         <li>
                             <form action="/logout" method="post">
                                 @csrf

@@ -117,7 +117,7 @@ img {
 }
 
 .card-about {
-    animation: rotate 1s infinite;
+    animation: rotate 0.1s infinite;
 }
 
 body {
