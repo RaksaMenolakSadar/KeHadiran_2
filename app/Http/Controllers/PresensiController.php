@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class PresensiController extends Controller
 {
@@ -13,6 +16,7 @@ class PresensiController extends Controller
      */
     public function index()
     {
+        $currentTime= Carbon::now('GMT+7')->format('H:i:s');
         return view('presensi.masuk');
     }
 
@@ -34,7 +38,7 @@ class PresensiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

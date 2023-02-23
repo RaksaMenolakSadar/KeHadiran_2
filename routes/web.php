@@ -34,12 +34,19 @@ Route::post('/register', [RegisterController::class, 'store']);
 //     return view('dashboard');
 // })->name('dashboard');
 
-Route::middleware('role:admin')->get('/dashboard', function() {
-    return view('dashboard.index');
-})->middleware('auth');
+
 
 
 Route::resource('/dashboard/users', DashboardUsersController::class)->middleware('auth');
 Route::resource('/dashboard/graphs', DashboardGraphController::class)->middleware('auth');
 
 Route::resource('/presensi/masuk', PresensiController::class);
+Route::get('/loginpage', function () {
+    return view('loginpage.index');
+});
+
+Route::group(['middleware' => ['auth','cekLevel:admin']], function (){
+    Route::middleware('role:admin')->get('/dashboard', function() {
+        return view('dashboard.index');
+    })->middleware('auth');
+});
