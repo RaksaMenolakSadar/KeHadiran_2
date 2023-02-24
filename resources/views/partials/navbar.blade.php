@@ -8,9 +8,11 @@
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" style="color: inherit;" href="/">Home</a>
                 </li>
+                @can('presensi', 'dashboard')
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('/presensi/masuk') ? 'active' : '' }}" style="color: inherit;" href="/presensi/masuk">Presensi</a>
                 </li>
+                @endcan
             </ul>
             <ul class="navbar-nav ms-auto">
                 @auth

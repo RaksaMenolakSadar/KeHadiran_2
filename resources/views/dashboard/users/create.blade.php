@@ -13,6 +13,7 @@
                 <option value="RPL">RPL</option>
                 <option value="TKJ">TKJ</option>
                 <option value="OTKP">OTKP</option>
+                <option value="Guru">Guru</option>
             </select>
         </div>
         <div class="mb-3">Role
@@ -39,7 +40,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" name="password">
         </div>
 

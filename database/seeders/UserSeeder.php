@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Spatie\Permission\Models\Permission;
 
 class UserSeeder extends Seeder
 {
@@ -23,19 +24,36 @@ class UserSeeder extends Seeder
         ]);
 
         $admin->assignRole('admin');
-        $admin->givePermissionTo(['dashboard', 'admin']);
+        $admin->givePermissionTo(Permission::all());
 
         
-        $user = User::create([
-            'nama' => 'user',
-            'username' => 'user',
+        $guest = User::create([
+            'nama' => 'guest',
+            'username' => 'guest',
             'email' => 'user@gmail.com',
             "password" => bcrypt('12345')
         ]);
 
-        $user->assignRole('user');
+        $guest->assignRole('guest');
+
+        $guru = User::create([
+            'nama' => 'guru',
+            'username' => 'guru',
+            'email' => 'guru@gmail.com',
+            'password' => bcrypt('12345'),
+        ]);
 
         $guru->assignRole('guru');
         $guru->givePermissionTo(['guru']);
+
+        $murid = User::create([
+            'nama' => 'murid',
+            'username' => 'murid',
+            'email' => 'murid@gmail.com',
+            'password' => bcrypt('12345')
+        ]);
+
+        $murid->assignRole('murid');
+        $murid->givePermissionTo(['presensi','murid']);
     }
 }

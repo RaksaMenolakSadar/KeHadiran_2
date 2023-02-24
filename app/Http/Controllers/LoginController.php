@@ -28,7 +28,7 @@ class LoginController extends Controller
             {
                 return redirect('/dashboard');
             }
-            else if(Auth::user()->roles->first()->name == 'user')
+            else if(Auth::user()->roles->first()->name == 'guest')
             {
                 return redirect('/');
             }

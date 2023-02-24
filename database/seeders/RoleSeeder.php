@@ -22,7 +22,7 @@ class RoleSeeder extends Seeder
         ]);
 
         Role::create([
-            'name' => 'user',
+            'name' => 'guest',
             'guard_name' => 'web'
         ]);
 
@@ -39,6 +39,9 @@ class RoleSeeder extends Seeder
         Permission::create([
             'name' => 'dashboard'
         ]);
+        Permission::create([
+            'name' => 'presensi'
+        ]);
 
         Permission::create([
             'name' => 'admin',
@@ -46,6 +49,10 @@ class RoleSeeder extends Seeder
         
         Permission::create([
             'name' => 'guru',
+        ]);
+        
+        Permission::create([
+            'name' => 'murid',
         ]);
     }
 }

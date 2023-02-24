@@ -10,6 +10,14 @@
     <form method="post" action="/dashboard/users/{{ $user->id }}">
         @method('put')
             @csrf
+                <div class="mb-3">Kelas
+                    <select name="kelas" class="form-select" aria-label="Default select example">
+                        <option value="RPL">RPL</option>
+                        <option value="TKJ">TKJ</option>
+                        <option value="OTKP">OTKP</option>
+                        <option value="Guru">Guru</option>
+                    </select>
+                </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="email" name="email" required autofocus>
@@ -26,7 +34,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <label for="password" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password" name="password">
                 </div>
             <a href="/dashboard/users" class="btn btn-outline-warning"><- Return to list</a>
