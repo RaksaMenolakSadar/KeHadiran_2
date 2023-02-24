@@ -19,14 +19,14 @@
                         Welcome, {{ auth()->user()->username }}
                     </a>
                     <ul class="dropdown-menu">
-                        @if (auth()->user()->level == 'admin')
+                        @can('dashboard')
                         <li>
                             <a class="dropdown-item" href="/dashboard"><i class="bi bi-grid-1x2"></i> Dashboard</a>
                         </li>
-                        @endif
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+                        @endcan
                         <li>
                             <form action="/logout" method="post">
                                 @csrf

@@ -23,6 +23,7 @@ class UserSeeder extends Seeder
         ]);
 
         $admin->assignRole('admin');
+        $admin->givePermissionTo(['dashboard', 'admin']);
 
         
         $user = User::create([
@@ -33,5 +34,8 @@ class UserSeeder extends Seeder
         ]);
 
         $user->assignRole('user');
+
+        $guru->assignRole('guru');
+        $guru->givePermissionTo(['guru']);
     }
 }
