@@ -42,6 +42,9 @@ class RoleSeeder extends Seeder
         Permission::create([
             'name' => 'presensi'
         ]);
+        Permission::create([
+            'name' => 'laporan'
+        ]);
 
         Permission::create([
             'name' => 'admin',

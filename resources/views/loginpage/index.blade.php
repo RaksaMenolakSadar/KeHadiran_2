@@ -19,9 +19,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card-body">
-                        <h5>
+                        <h2>
                             silahkan login
-                        </h5>
+                        </h2>
                         <p class="card-text">silahkan masukkan credential anda</p>
                             <form action="/login" method="post" style="display: flex; flex-direction: column; gap: 20px;">
                                 @csrf

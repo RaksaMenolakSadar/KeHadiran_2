@@ -21,7 +21,7 @@
         <div class="h-100 p-5  rounded-3" style="background-color: #0cc0df;">
           <h2>Want to go to the homepage?</h2>
           <p>Click the button below to go to the homepage</p>
-          <a href="/" class="btn btn-outline-" type="button">Homepage</a>
+          <a href="/" class="btn btn-outline-dark" type="button">Homepage</a>
         </div>
       </div>
         
@@ -37,7 +37,7 @@
   </div>
   
   <footer class="mt-5 text-muted border-top">
-    &copy; 2022
+    &copy; 2023
     By Rakhsha
   </footer>
 </main>

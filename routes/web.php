@@ -6,6 +6,7 @@ use App\Http\Controllers\PresensiController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardGraphController;
 use App\Http\Controllers\DashboardUsersController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,7 @@ Route::resource('/dashboard/users', DashboardUsersController::class)->middleware
 Route::resource('/dashboard/graphs', DashboardGraphController::class)->middleware('auth');
 
 Route::resource('/presensi/masuk', PresensiController::class);
+Route::resource('/laporan/kehadiran', LaporanController::class);
 Route::get('/loginpage', function () {
     return view('loginpage.index');
 });
