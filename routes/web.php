@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardGraphController;
 use App\Http\Controllers\DashboardUsersController;
 use App\Http\Controllers\LaporanController;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,8 +44,8 @@ Route::middleware('role:admin')->get('/dashboard', function() {
 Route::resource('/dashboard/users', DashboardUsersController::class)->middleware('auth');
 Route::resource('/dashboard/graphs', DashboardGraphController::class)->middleware('auth');
 
-Route::resource('/presensi/masuk', PresensiController::class);
-Route::resource('/laporan/kehadiran', LaporanController::class);
+Route::resource('/presensi/masuk', PresensiController::class)->middleware('can:presensi');
+Route::resource('/laporan/kehadiran', LaporanController::class)->middleware('auth');
 Route::get('/loginpage', function () {
     return view('loginpage.index');
 });

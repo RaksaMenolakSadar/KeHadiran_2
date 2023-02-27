@@ -66,6 +66,7 @@ class DashboardUsersController extends Controller
 
         $user->assignRole($request->role);
 
+        dd($request->all());
 
         return redirect('/dashboard/users')->with('success', 'User has been added!');
     }

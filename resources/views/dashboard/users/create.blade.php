@@ -19,7 +19,7 @@
         <div class="mb-3">Role
             <select name="role" class="form-select" aria-label="Default select example">
                 @foreach($roles as $role)
-                <option value="{{ $role->name }}">{{ $role->name }}</option>
+                <option value="{{ $role->id }}">{{ $role->name }}</option>
                 @endforeach
             </select>
         </div>
@@ -49,6 +49,5 @@
         <button type="submit" class="btn btn-primary ">Add User</button>
     </form>
 </div>
-
 
 @endsection

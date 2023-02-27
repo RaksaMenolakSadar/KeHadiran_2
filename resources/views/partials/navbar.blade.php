@@ -13,7 +13,7 @@
                     <a class="nav-link {{ Request::is('/presensi/masuk') ? 'active' : '' }}" style="color: inherit;" href="/presensi/masuk">Presensi</a>
                 </li>
                 @endcan
-                @can('guru')
+                @can('laporan')
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('/laporan/kehadiran') ? 'active' : '' }}" style="color: inherit;" href="/laporan/kehadiran">Kehadiran</a>
                 </li>

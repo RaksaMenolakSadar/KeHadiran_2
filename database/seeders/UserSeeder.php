@@ -44,7 +44,7 @@ class UserSeeder extends Seeder
         ]);
 
         $guru->assignRole('guru');
-        $guru->givePermissionTo(['laporan', 'guru']);
+        $guru->givePermissionTo('laporan');
 
         $murid = User::create([
             'nama' => 'murid',
@@ -54,6 +54,6 @@ class UserSeeder extends Seeder
         ]);
 
         $murid->assignRole('murid');
-        $murid->givePermissionTo(['presensi','murid']);
+        $murid->givePermissionTo('presensi');
     }
 }
