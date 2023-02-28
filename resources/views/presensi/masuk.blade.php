@@ -11,7 +11,12 @@ Presensi
 <h1>Halaman Presensi</h1>
 <div class="content">
     <div class="container-fluid">
-    <span id="hours"></span>.<span id="minutes"></span>.<span id="seconds"></span>
+
+    <div class="card">
+        <div class="card-body">
+        <span id="hours"></span>.<span id="minutes"></span>.<span id="seconds"></span>
+        </div>
+    </div>
     </div>
 </div>
 <script src="{{ asset('js/jam.js') }}"></script>
