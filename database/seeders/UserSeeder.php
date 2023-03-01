@@ -26,7 +26,6 @@ class UserSeeder extends Seeder
         $admin->assignRole('admin');
         $admin->givePermissionTo(Permission::all());
 
-        
         $guest = User::create([
             'nama' => 'guest',
             'username' => 'guest',
@@ -44,7 +43,6 @@ class UserSeeder extends Seeder
         ]);
 
         $guru->assignRole('guru');
-        $guru->givePermissionTo('laporan');
 
         $murid = User::create([
             'nama' => 'murid',
@@ -54,6 +52,5 @@ class UserSeeder extends Seeder
         ]);
 
         $murid->assignRole('murid');
-        $murid->givePermissionTo('presensi');
     }
 }

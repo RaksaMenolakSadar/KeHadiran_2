@@ -43,14 +43,14 @@ class DashboardUsersController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'email' => 'required | email | unique:users',
-            'role' => 'required',
-            'kelas' => 'required',
-            'nama' => 'required | max:100',
-            'username' => 'required', 'min:3', 'max:100', 'unique:users',
-            'password' => 'required | min:5 | max:15'
-        ]);
+        // $validatedData = $request->validate([
+        //     'email' => 'required | email | unique:users',
+        //     'role' => 'required',
+        //     'kelas' => 'required',
+        //     'nama' => 'required | max:100',
+        //     'username' => 'required', 'min:3', 'max:100', 'unique:users',
+        //     'password' => 'required | min:5 | max:15'
+        // ]);
         
         // $validatedData['password'] = bcrypt($validatedData['password']);
 
@@ -65,8 +65,6 @@ class DashboardUsersController extends Controller
         ]);
 
         $user->assignRole($request->role);
-
-        dd($request->all());
 
         return redirect('/dashboard/users')->with('success', 'User has been added!');
     }

@@ -26,12 +26,12 @@ class RoleSeeder extends Seeder
             'guard_name' => 'web'
         ]);
 
-        Role::create([
+        $murid = Role::create([
             'name' => 'murid',
             'guard_name' => 'web'
         ]);
 
-        Role::create([
+        $guru = Role::create([
             'name' => 'guru',
             'guard_name' => 'web'
         ]);
@@ -39,6 +39,7 @@ class RoleSeeder extends Seeder
         Permission::create([
             'name' => 'dashboard'
         ]);
+
         Permission::create([
             'name' => 'presensi'
         ]);
@@ -57,5 +58,8 @@ class RoleSeeder extends Seeder
         Permission::create([
             'name' => 'murid',
         ]);
+
+        $murid->givePermissionTo(['presensi']);
+        $guru->givePermissionTo(['laporan']);
     }
 }

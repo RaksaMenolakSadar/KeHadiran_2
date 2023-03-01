@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Presensi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Http\Controllers\Controller;
@@ -16,8 +17,9 @@ class PresensiController extends Controller
      */
     public function index()
     {
-        $currentTime= Carbon::now('GMT+7')->format('H:i:s');
-        return view('presensi.masuk');
+        return view('presensi.masuk', [
+            'presensi' => Presensi::all()
+        ]);
     }
 
     /**
@@ -38,7 +40,12 @@ class PresensiController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $presensi = Presensi::create([
+            'nama' => $request->nama,
+            'kelas' => $request->kelas,
+            'jam-masuk' => $request->jam
+        ]);
+        return redirect('/')->with('success', 'anda telah presensi');
     }
 
     /**

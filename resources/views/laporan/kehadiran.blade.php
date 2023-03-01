@@ -11,26 +11,27 @@ Kehadiran
     <table class="table table-striped table-sm">
         <thead class="table-light border-dark">
             <tr>
-                <th >tes</th>
-                <th >Tes</th>
-                <th >tEs</th>
-                <th >tEs</th>
+                <th >No</th>
+                <th >Nama</th>
+                <th >Kelas</th>
+                <th >Jam Masuk</th>
                 <th >Action</th>
             </tr>
         </thead>
 
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>
-                    <button class="btn btn-outline-success">Edit</button>
-                </td>
-            </tr>
+            
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-outline-success">Edit</button>
+                    </td>
+                </tr>
+            
         </tbody>
-
     </table>
 </div>
 

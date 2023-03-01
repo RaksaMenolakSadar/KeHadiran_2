@@ -14,7 +14,8 @@ Presensi
 
     <div class="card">
         <div class="card-body">
-        <span id="hours"></span>.<span id="minutes"></span>.<span id="seconds"></span>
+        <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+        <div class="btn btn-primary">tes</div>
         </div>
     </div>
     </div>

@@ -8,16 +8,19 @@
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" style="color: inherit;" href="/">Home</a>
                 </li>
+
                 @can('presensi')
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('/presensi/masuk') ? 'active' : '' }}" style="color: inherit;" href="/presensi/masuk">Presensi</a>
                 </li>
                 @endcan
+                
                 @can('laporan')
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('/laporan/kehadiran') ? 'active' : '' }}" style="color: inherit;" href="/laporan/kehadiran">Kehadiran</a>
                 </li>
                 @endcan
+                
             </ul>
             <ul class="navbar-nav ms-auto">
                 @auth
@@ -47,7 +50,7 @@
                     <a href="/login" class="nav-link"><i class="bi bi-box-arrow-in-right" style="color: inherit;"></i>  Login</a>
                 </li>
                 @endauth
-            </ul>            
+            </ul>         
         </div>
     </div>
 </nav>
