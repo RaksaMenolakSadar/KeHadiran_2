@@ -6,6 +6,9 @@ use App\Models\Presensi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Http\Controllers\Controller;
+use DateTime;
+use DateTimeZone;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 
 class PresensiController extends Controller
@@ -17,9 +20,13 @@ class PresensiController extends Controller
      */
     public function index()
     {
-        return view('presensi.masuk', [
-            'presensi' => Presensi::all()
+        $id = Auth::id();
+        $user = User::find($id);
+        return view('presensi.masuk')
+        ->with([
+            'user' => $user,
         ]);
+        ;
     }
 
     /**
@@ -40,12 +47,25 @@ class PresensiController extends Controller
      */
     public function store(Request $request)
     {
-        $presensi = Presensi::create([
-            'nama' => $request->nama,
-            'kelas' => $request->kelas,
-            'jam-masuk' => $request->jam
-        ]);
-        return redirect('/')->with('success', 'anda telah presensi');
+        $timezone = 'Asia/Jakarta';
+        $date = new DateTime('now', new DateTimeZone($timezone));
+        $tanggal = $date->format('d-m-Y');
+        $localtime = $date->format('H:i:s');
+
+        $presensi = Presensi::where([
+            ['user_id','=',auth()->user()->id],
+            ['tgl','=',$tanggal]
+        ])->first();
+        if ($presensi){
+            dd('sudah ada');
+        }else{
+            Presensi::create([
+                'user_id' => auth()->user()->id,
+                'tgl' => $tanggal,
+                'jam-masuk' => $localtime
+            ]);
+        }
+        return view('/presensi/masuk');
     }
 
     /**

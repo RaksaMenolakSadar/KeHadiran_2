@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardGraphController;
 use App\Http\Controllers\DashboardUsersController;
 use App\Http\Controllers\LaporanController;
+use App\Models\Presensi;
 use GuzzleHttp\Middleware;
 
 /*

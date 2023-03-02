@@ -11,8 +11,14 @@ class Presensi extends Model
 
     protected $table = 'presensi';
     protected $fillable = [
+        'user_id',
         'nama',
         'kelas',
         'jam-masuk'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

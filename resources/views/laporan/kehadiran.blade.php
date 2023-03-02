@@ -18,14 +18,13 @@ Kehadiran
                 <th >Action</th>
             </tr>
         </thead>
-
+        @foreach($presensi as $items)
         <tbody>
             
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{ $items->user->nama }}</td>
+                    <td>{{ $items->kelas }}</td>
+                    <td>{{ $items->jam }}</td>
                     <td>
                         <button class="btn btn-outline-success">Edit</button>
                     </td>

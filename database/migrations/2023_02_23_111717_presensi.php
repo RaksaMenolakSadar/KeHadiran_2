@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('presensi', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id');
             $table->string('nama');
             $table->string('kelas');
-            $table->time('jam');
+            $table->time('jam')->nullable();
             $table->timestamps();
         });
     }
