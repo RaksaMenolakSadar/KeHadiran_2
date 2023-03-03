@@ -11,7 +11,7 @@
         @method('put')
             @csrf
                 <div class="mb-3">Kelas
-                    <select name="kelas" class="form-select" aria-label="Default select example">
+                    <select name="kelas" class="form-select" aria-label="Default select example" required>
                         <option value="RPL">RPL</option>
                         <option value="TKJ">TKJ</option>
                         <option value="OTKP">OTKP</option>

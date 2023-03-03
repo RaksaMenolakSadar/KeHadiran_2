@@ -10,7 +10,7 @@
     
   </div>
   <footer class="mt-5 text-muted border-top">
-    &copy; 2022
+    &copy; 2023
     By Rakhsha
   </footer>
 </main>

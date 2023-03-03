@@ -21,10 +21,12 @@ class PresensiController extends Controller
     public function index()
     {
         $id = Auth::id();
+        $presensi = Presensi::with('user')->get();
         $user = User::find($id);
         return view('presensi.masuk')
         ->with([
             'user' => $user,
+            'presensi' => $presensi
         ]);
         ;
     }

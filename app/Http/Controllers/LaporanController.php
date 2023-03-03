@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Presensi;
 use Illuminate\Http\Request;
 
 class LaporanController extends Controller
@@ -13,7 +14,9 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        return view('laporan.kehadiran');
+        return view('laporan.kehadiran', [
+            'presensi' => Presensi::all()
+        ]);
     }
 
     /**
@@ -34,7 +37,11 @@ class LaporanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $presensi = Presensi::create([
+            'nama' => $request->nama,
+            'kelas' => $request->kelas,
+            'jam-masuk' => $request->jam
+        ]);
     }
 
     /**

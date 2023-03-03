@@ -108,7 +108,7 @@ class DashboardUsersController extends Controller
             'nama' => 'required | max:100',
             'username' => ['required', 'min:3', 'max:100', 'unique:users'],
             'password' => 'required | min:5 | max:15',
-            'kelas' => 'required',
+            'kelas' => 'required'
         ];
 
         $validatedData = $request->validate($rules);
