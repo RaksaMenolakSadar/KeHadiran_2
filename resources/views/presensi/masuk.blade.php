@@ -10,15 +10,16 @@ Presensi
 </h2>
 <h1>Halaman Presensi</h1>
 
-<p>{{ $user->nama }}</p>
 <div class="content">
     <div class="container-fluid">
         <div class="card">
             <div class="card-body">
-                <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-outline-primary" value="{{ $user->nama, $user->kelas }}">tes</button>
-                </div>
+                <form action="/presensi/masuk" method="post">
+                    <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-outline-primary">tes</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

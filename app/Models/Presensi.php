@@ -14,7 +14,7 @@ class Presensi extends Model
         'user_id',
         'nama',
         'kelas',
-        'jam-masuk'
+        'jam'
     ];
 
     public function user()

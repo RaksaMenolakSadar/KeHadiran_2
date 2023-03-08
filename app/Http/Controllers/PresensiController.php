@@ -64,7 +64,7 @@ class PresensiController extends Controller
             Presensi::create([
                 'user_id' => auth()->user()->id,
                 'tgl' => $tanggal,
-                'jam-masuk' => $localtime
+                'jam' => $localtime
             ]);
         }
         return view('/presensi/masuk');
