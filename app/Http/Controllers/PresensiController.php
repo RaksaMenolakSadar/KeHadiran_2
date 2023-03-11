@@ -51,19 +51,16 @@ class PresensiController extends Controller
     {
         $timezone = 'Asia/Jakarta';
         $date = new DateTime('now', new DateTimeZone($timezone));
-        $tanggal = $date->format('d-m-Y');
         $localtime = $date->format('H:i:s');
 
         $presensi = Presensi::where([
-            ['user_id','=',auth()->user()->id],
-            ['tgl','=',$tanggal]
+            ['user_id','=',auth()->user()->id]
         ])->first();
         if ($presensi){
             dd('sudah ada');
         }else{
             Presensi::create([
                 'user_id' => auth()->user()->id,
-                'tgl' => $tanggal,
                 'jam' => $localtime
             ]);
         }

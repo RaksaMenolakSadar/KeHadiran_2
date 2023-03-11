@@ -15,6 +15,7 @@ Presensi
         <div class="card">
             <div class="card-body">
                 <form action="/presensi/masuk" method="post">
+                    @csrf
                     <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
                     <div class="form-group">
                         <button type="submit" class="btn btn-outline-primary">tes</button>
