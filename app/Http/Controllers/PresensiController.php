@@ -54,14 +54,15 @@ class PresensiController extends Controller
         $localtime = $date->format('H:i:s');
 
         $presensi = Presensi::where([
-            ['user_id','=',auth()->user()->id]
-        ])->first();
+            ['user_id','=',auth()->user()->id]])->first();
         if ($presensi){
             dd('sudah ada');
         }else{
             Presensi::create([
                 'user_id' => auth()->user()->id,
-                'jam' => $localtime
+                'jam' => $localtime,
+                'nama' => Auth::user()->nama,
+                'kelas' => Auth::user()->kelas
             ]);
         }
         return view('/presensi/masuk');

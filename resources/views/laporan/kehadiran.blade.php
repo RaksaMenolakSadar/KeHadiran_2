@@ -11,7 +11,7 @@ Kehadiran
     <table class="table table-striped table-sm">
         <thead class="table-light border-dark">
             <tr>
-                <th>No</th>
+                <th>no</th>
                 <th>Nama</th>
                 <th>Kelas</th>
                 <th>Jam Masuk</th>
@@ -20,16 +20,15 @@ Kehadiran
         </thead>
         @foreach($presensi as $absen)
         <tbody>
-            
-                <tr>
-                    <td>{{ $absen->user->nama }}</td>
-                    <td>{{ $absen->kelas }}</td>
-                    <td>{{ $absen->jam }}</td>
-                    <td>
-                        <button class="btn btn-outline-success">Edit</button>
-                    </td>
-                </tr>
-            
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $absen->user->nama }}</td>
+                <td>{{ $absen->kelas }}</td>
+                <td>{{ $absen->jam }}</td>
+                <td>
+                    <button class="btn btn-outline-success">Edit</button>
+                </td>
+            </tr>
         </tbody>
         @endforeach
     </table>
