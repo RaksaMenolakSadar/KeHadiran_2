@@ -21,24 +21,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script>
-        var options = {
-        chart: {
-            type: 'line'
-        },
-        series: [{
-            name: 'sales',
-            data: [30,40,35,50,49,60,70,91,125]
-        }],
-        xaxis: {
-            categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
-        }
-        }
-
-        var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-        chart.render();
-    </script>
 </body>
 
 </html>

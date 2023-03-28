@@ -86,6 +86,8 @@ class LaporanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Presensi::find($id)->delete();
+
+        return redirect('/laporan/kehadiran')->with('success', 'Presensi has been deleted!');
     }
 }

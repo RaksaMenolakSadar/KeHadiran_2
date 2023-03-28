@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Presensi;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DashboardGraphController extends Controller
 {
@@ -13,7 +16,12 @@ class DashboardGraphController extends Controller
      */
     public function index()
     {
-        return view('dashboard.graphs.index');
+        $users = Presensi::distinct()
+        ->select(DB::raw('COUNT(*) as total') , DB::raw('DAYNAME(created_at) as hari'))
+        ->where('created_at', '>=', DB::raw('DATE(NOW()) - INTERVAL 7 DAY'))
+        ->groupBy('hari')
+        ->get();
+        return view('dashboard.graphs.index', compact(['users']));
     }
 
     /**

@@ -51,14 +51,15 @@
         <script>
         var options = {
         chart: {
-            type: 'line', width:1000
+            type: 'line',
+            height: 300
         },
         series: [{
-            name: 'sales',
-            data: [30,40,35,50,49,60,70,91,125]
+            name: 'Jumlah',
+            data: label
         }],
         xaxis: {
-            categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+            categories: categories
         }
         }
 
