@@ -18,7 +18,7 @@ Presensi
                     @csrf
                     <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-outline-primary">tes</button>
+                        <button type="submit" class="btn btn-outline-primary">masuk</button>
                     </div>
                 </form>
             </div>
