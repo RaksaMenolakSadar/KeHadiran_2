@@ -52,20 +52,20 @@ class PresensiController extends Controller
         $timezone = 'Asia/Jakarta';
         $date = new DateTime('now', new DateTimeZone($timezone));
         $localtime = $date->format('H:i:s');
-
         $presensi = Presensi::where([
             ['user_id','=',auth()->user()->id]])->first();
-        if ($presensi){
-            dd('sudah ada');
-        }else{
-            Presensi::create([
+        if($presensi){
+            return view('/presensi/masuk')->with('selesai', 'Presensi sudah ada!');
+        }
+            else {Presensi::create([
                 'user_id' => auth()->user()->id,
                 'jam' => $localtime,
                 'nama' => Auth::user()->nama,
-                'kelas' => Auth::user()->kelas
+                'kelas' => Auth::user()->kelas,
+                'mapel' => $request->mapel
             ]);
         }
-        return view('/presensi/masuk');
+        return view('/presensi/masuk')->with('selesai', 'Presensi sudah direkam!');
     }
 
     /**

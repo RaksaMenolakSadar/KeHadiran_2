@@ -15,6 +15,7 @@ Kehadiran
                 <th>Nama</th>
                 <th>Kelas</th>
                 <th>Jam Masuk</th>
+                <th>Mapel</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -25,6 +26,7 @@ Kehadiran
                 <td>{{ $absen->user->nama }}</td>
                 <td>{{ $absen->kelas }}</td>
                 <td>{{ $absen->jam }}</td>
+                <td>{{ $absen->mapel }}</td>
                 <td>
                     <form action="/laporan/kehadiran/{{ $absen->id }}" method="post">
                         @method('delete')

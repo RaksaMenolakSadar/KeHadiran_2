@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('kelas');
             $table->time('jam')->nullable();
+            $table->string('mapel');
             $table->timestamps();
         });
     }

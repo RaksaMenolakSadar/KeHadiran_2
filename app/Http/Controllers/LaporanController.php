@@ -40,7 +40,8 @@ class LaporanController extends Controller
         $presensi = Presensi::create([
             'nama' => $request->nama,
             'kelas' => $request->kelas,
-            'jam-masuk' => $request->jam
+            'jam-masuk' => $request->jam,
+            'mapel' => $request->mapel
         ]);
     }
 
